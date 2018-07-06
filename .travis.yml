@@ -55,8 +55,6 @@ install:
 script:
   - cargo build --target $TARGET --verbose --release
 
-cache: cargo
-
 before_deploy:
   - tar -czf $PACKAGE -C target/$TARGET/release/ unipager
 
